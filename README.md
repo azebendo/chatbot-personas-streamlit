@@ -1,53 +1,73 @@
-<img width="997" alt="image" src="https://github.com/user-attachments/assets/5bdc42de-e5fd-4200-bb8d-e001cc5166f7">
+# Chatbot Interativo com Personas e Análise de Imagem
 
-![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
+## 🚀 Visão Geral
 
-# Titulo do projeto
+Este projeto é uma aplicação de chatbot multifuncional que permite aos usuários interagir com diferentes personas de IA. A aplicação é construída em Python com a biblioteca Streamlit para la interface principal, mas também inclui componentes de uma interface web tradicional (HTML, CSS, JS).
 
-4240 - Python e Gemini: crie seu chatbot com IA Generativa
+O chatbot é capaz de manter um histórico de conversas, analisar imagens enviadas pelo usuário e adaptar seu estilo de resposta com base na "persona" selecionada.
 
-## 🔨 Funcionalidades do projeto
+## 📊 Dados Utilizados
 
-Neste projeto vamos construir um chatbot utilizando a API do Gemini. Para isso utilizaremos uma aplicação base escrita em Flask, utilizando Python e com uma Interface desenhada em HTML, CSS e JS. 
+**Nota Importante:** Quaisquer dados utilizados ou gerados por este chatbot (exemplos de personas, diálogos, imagens de exemplo, etc.) são **puramente fictícios** e foram criados apenas para fins de demonstração. Nenhuma informação representa pessoas ou cenários reais.
 
-![](img/amostra.gif)
+## ✨ Funcionalidades
 
-## ✔️ Técnicas e tecnologias utilizadas
+- **Seleção de Personas:** O usuário pode escolher com qual tipo de assistente de IA deseja conversar (ex: especialista, criativo, etc.).
+- **Interface Interativa:** Interface web principal criada com Streamlit para facilitar a interação, upload de arquivos e visualização do chat.
+- **Processamento de Imagens:** Capacidade de receber uma imagem, analisá-la e discutir seu conteúdo.
+- **Gerenciamento de Histórico:** O chatbot mantém o contexto da conversa para interações mais fluidas.
+- **Componentes Web:** Inclui uma estrutura básica de frontend (`index.html`, `css`, `js`) que pode ser integrada ou servir como uma interface alternativa.
 
-As técnicas e tecnologias utilizadas pra isso são:
+## ✔️ Tecnologias Utilizadas
 
-- Programação em Python
-- Construção de Aplicações em Flask
-- Uso de API Gemini
-- Leitura de arquivos CSV e manipulação de dados
+- **Backend e IA:** Python, Streamlit, LangChain (ou bibliotecas de IA similares)
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Gerenciamento de Chaves:** python-dotenv
 
+---
 
-## 🛠️ Abrir e rodar o projeto
+## 🛠️ Como Executar o Projeto (Parte Streamlit)
 
-Após baixar o projeto, você pode abrir com Visual Studio Code. Em seguida, é necessário que você prepare seu ambiente. Para isso:
-
-### venv no Windows:
-
-```bash
-python -m venv venv-gemini-2
-source venv-gemini-2/Scripts/activate
-```
-
-### venv no Mac/Linux:
+### 1. Clone o Repositório
 
 ```bash
-python3 -m venv venv-gemini-2
-source venv-gemini-2/bin/activate
+git clone [https://github.com/SEU-USUARIO/chatbot-personas-streamlit.git](https://github.com/SEU-USUARIO/chatbot-personas-streamlit.git)
+cd chatbot-personas-streamlit
 ```
 
-Em seguida, instale os pacotes utilizando:
+### 2. Crie e Ative o Ambiente Virtual
+
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Mac/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Instale as Dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🔑 Gerar API_KEY e associar ao .env
+### 4. Configure as Chaves de API
 
-```python
-GEMINI_API_KEY = "SUA_CHAVE_AQUI"
+- O projeto já inclui um arquivo `.env`. Certifique-se de preenchê-lo com suas chaves de API válidas.
+  ```
+  SUA_API_KEY="seu-valor-secreto-aqui"
+  ```
+
+### 5. Execute a Aplicação Streamlit
+
+Para iniciar a interface principal do chatbot:
+
+```bash
+streamlit run app.py
 ```
+
+A aplicação será aberta no seu navegador.
+
+---
